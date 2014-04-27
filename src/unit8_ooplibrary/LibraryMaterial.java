@@ -21,6 +21,11 @@ public abstract class LibraryMaterial {
     private ImageIcon coverImage;
     
     public LibraryMaterial() {
+        this.author = "";
+        this.title = "";
+        this.price = new BigDecimal("0.0");
+        this.publicationYear = 0;
+        this.coverImage = null;
     }
     
     public LibraryMaterial(String author, String title, BigDecimal price, short publicationYear, ImageIcon coverImage) {
