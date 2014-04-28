@@ -38,8 +38,8 @@ public class Inventory {
     }
 
     private void setLibraryMaterialID(int libraryMaterialID) {
-        // TODO: Implement functionality for setLibraryMaterialID to get Id from HashMap
-        throw new UnsupportedOperationException();
+    // TODO: Implement functionality for setLibraryMaterialID to get Id from HashMap
+    throw new UnsupportedOperationException();
     }
     
     // TODO: Add method to UML
