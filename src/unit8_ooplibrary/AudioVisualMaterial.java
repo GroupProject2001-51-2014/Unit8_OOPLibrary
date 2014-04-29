@@ -117,7 +117,7 @@ public class AudioVisualMaterial extends LibraryMaterial{
         throw new UnsupportedOperationException();
     } 
     
-    public Clip getSoundClip(URL fileURL) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    public synchronized Clip getSoundClip(URL fileURL) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         try {
             Clip clip = AudioSystem.getClip();  
             AudioInputStream inputStream;
@@ -135,7 +135,7 @@ public class AudioVisualMaterial extends LibraryMaterial{
         return null;
     } 
     
-    public void playSoundClip(URL fileURL) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    public synchronized void playSoundClip(URL fileURL) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         try {
             Clip clip = AudioSystem.getClip();  
             AudioInputStream inputStream;
@@ -151,7 +151,7 @@ public class AudioVisualMaterial extends LibraryMaterial{
         }
     }
     
-    public void playSoundClip(final URL fileURL, long seconds) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    public synchronized void playSoundClip(final URL fileURL, long seconds) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         final Runnable runnable = new Runnable() {
             @Override
             public void run() {
