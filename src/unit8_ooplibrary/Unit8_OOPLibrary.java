@@ -32,12 +32,13 @@ public class Unit8_OOPLibrary {
         
         if (DEBUG) {
             final Inventory inv = new Inventory(new AudioVisualMaterial());
-            final URL soundFileURL = inv.getClass().getResource("/Sound/error.wav");
+            //final URL soundFileURL = inv.getClass().getResource("/Sound/error.wav");
+            final URL soundFileURL = inv.getClass().getResource("/Sound/indigo jam unit - Roots.wav");
             
             System.out.print(inv.getLibraryMaterial().displayInfo());
         
             try{
-            ((AudioVisualMaterial) inv.getLibraryMaterial()).playSoundClip(soundFileURL, 1);
+            ((AudioVisualMaterial) inv.getLibraryMaterial()).playSoundClip(soundFileURL, 10);
             } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
               Logger.getLogger(Unit8_OOPLibrary.class.getName()).log(Level.SEVERE, null, ex);
             }
