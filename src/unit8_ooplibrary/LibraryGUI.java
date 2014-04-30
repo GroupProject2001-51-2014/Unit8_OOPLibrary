@@ -30,20 +30,22 @@ public class LibraryGUI extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         bookTab = new javax.swing.JPanel();
         bookCover = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        book1 = new javax.swing.JButton();
+        book2 = new javax.swing.JButton();
+        book3 = new javax.swing.JButton();
+        bookInfo = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         cdTab = new javax.swing.JPanel();
         cdCover = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        audio1 = new javax.swing.JButton();
+        audio2 = new javax.swing.JButton();
+        audio3 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        cdInfo = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        libraryTab.setTabPlacement(javax.swing.JTabbedPane.RIGHT);
+        libraryTab.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         libraryTab.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -53,13 +55,13 @@ public class LibraryGUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("G1 LIBRARY");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(80, 10, 292, 62);
+        jLabel1.setBounds(110, 10, 292, 59);
 
         jLabel4.setForeground(new java.awt.Color(255, 0, 51));
         jLabel4.setText("WE HOPE YOU CAN FIND SOME LITTLE INTERESTING THINGS HERE.");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 430, 420, 20);
+        jLabel4.setBounds(40, 500, 420, 20);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/global.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -68,121 +70,111 @@ public class LibraryGUI extends javax.swing.JFrame {
 
         libraryTab.addTab("HOME", new javax.swing.ImageIcon(getClass().getResource("/Image/HomeButton.png")), jPanel1); // NOI18N
 
-        bookTab.setBackground(new java.awt.Color(102, 255, 102));
+        bookTab.setBackground(new java.awt.Color(255, 204, 204));
+        bookTab.setLayout(null);
 
         javax.swing.GroupLayout bookCoverLayout = new javax.swing.GroupLayout(bookCover);
         bookCover.setLayout(bookCoverLayout);
         bookCoverLayout.setHorizontalGroup(
             bookCoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 290, Short.MAX_VALUE)
         );
         bookCoverLayout.setVerticalGroup(
             bookCoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 282, Short.MAX_VALUE)
         );
 
-        jButton1.setText("book1");
+        bookTab.add(bookCover);
+        bookCover.setBounds(200, 230, 290, 282);
 
-        jButton2.setText("book 2");
+        book1.setText("book1");
+        book1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                book1ActionPerformed(evt);
+            }
+        });
+        bookTab.add(book1);
+        book1.setBounds(20, 29, 163, 97);
 
-        jButton3.setText("book 3");
+        book2.setText("book 2");
+        book2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                book2ActionPerformed(evt);
+            }
+        });
+        bookTab.add(book2);
+        book2.setBounds(20, 215, 163, 97);
 
-        jTextField1.setText("jTextField1");
+        book3.setText("book 3");
+        book3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                book3ActionPerformed(evt);
+            }
+        });
+        bookTab.add(book3);
+        book3.setBounds(20, 382, 163, 96);
 
-        javax.swing.GroupLayout bookTabLayout = new javax.swing.GroupLayout(bookTab);
-        bookTab.setLayout(bookTabLayout);
-        bookTabLayout.setHorizontalGroup(
-            bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bookTabLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bookCover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
-        );
-        bookTabLayout.setVerticalGroup(
-            bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bookTabLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bookTabLayout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bookCover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(54, Short.MAX_VALUE))
-                    .addGroup(bookTabLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
-        );
+        jTextArea1.setBackground(new java.awt.Color(255, 204, 204));
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        bookInfo.setViewportView(jTextArea1);
+
+        bookTab.add(bookInfo);
+        bookInfo.setBounds(200, 10, 290, 210);
 
         libraryTab.addTab("BOOK", new javax.swing.ImageIcon(getClass().getResource("/Image/book.png")), bookTab); // NOI18N
 
-        cdTab.setBackground(new java.awt.Color(255, 51, 51));
+        cdTab.setBackground(new java.awt.Color(153, 255, 153));
+        cdTab.setLayout(null);
 
         javax.swing.GroupLayout cdCoverLayout = new javax.swing.GroupLayout(cdCover);
         cdCover.setLayout(cdCoverLayout);
         cdCoverLayout.setHorizontalGroup(
             cdCoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 290, Short.MAX_VALUE)
         );
         cdCoverLayout.setVerticalGroup(
             cdCoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 269, Short.MAX_VALUE)
+            .addGap(0, 280, Short.MAX_VALUE)
         );
 
-        jButton4.setText("video 1");
+        cdTab.add(cdCover);
+        cdCover.setBounds(200, 239, 290, 280);
 
-        jButton5.setText("video 2");
+        audio1.setText("audio1");
+        audio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                audio1ActionPerformed(evt);
+            }
+        });
+        cdTab.add(audio1);
+        audio1.setBounds(6, 34, 177, 94);
 
-        jButton6.setText("video 3");
+        audio2.setText("audio2");
+        audio2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                audio2ActionPerformed(evt);
+            }
+        });
+        cdTab.add(audio2);
+        audio2.setBounds(6, 208, 177, 94);
 
-        jTextField2.setText("jTextField2");
+        audio3.setText("video 3");
+        audio3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                audio3ActionPerformed(evt);
+            }
+        });
+        cdTab.add(audio3);
+        audio3.setBounds(6, 364, 177, 94);
 
-        javax.swing.GroupLayout cdTabLayout = new javax.swing.GroupLayout(cdTab);
-        cdTab.setLayout(cdTabLayout);
-        cdTabLayout.setHorizontalGroup(
-            cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cdTabLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cdCover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        cdTabLayout.setVerticalGroup(
-            cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cdTabLayout.createSequentialGroup()
-                .addGroup(cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cdTabLayout.createSequentialGroup()
-                        .addContainerGap(51, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(cdTabLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cdTabLayout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(62, 62, 62)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cdCover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
-        );
+        cdInfo.setBackground(new java.awt.Color(153, 255, 153));
+        cdInfo.setColumns(20);
+        cdInfo.setRows(5);
+        jScrollPane2.setViewportView(cdInfo);
+
+        cdTab.add(jScrollPane2);
+        jScrollPane2.setBounds(200, 10, 290, 210);
 
         libraryTab.addTab("CD-DVD", new javax.swing.ImageIcon(getClass().getResource("/Image/cd.png")), cdTab); // NOI18N
 
@@ -190,21 +182,44 @@ public class LibraryGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGap(0, 15, Short.MAX_VALUE)
+                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+// book tab
+    private void book1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_book1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_book1ActionPerformed
+
+    private void book3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_book3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_book3ActionPerformed
+
+    private void book2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_book2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_book2ActionPerformed
+// cd-dvd tab
+    private void audio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_audio1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_audio1ActionPerformed
+
+    private void audio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_audio2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_audio2ActionPerformed
+
+    private void audio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_audio3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_audio3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,22 +257,24 @@ public class LibraryGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton audio1;
+    private javax.swing.JButton audio2;
+    private javax.swing.JButton audio3;
+    private javax.swing.JButton book1;
+    private javax.swing.JButton book2;
+    private javax.swing.JButton book3;
     private javax.swing.JPanel bookCover;
+    private javax.swing.JScrollPane bookInfo;
     private javax.swing.JPanel bookTab;
     private javax.swing.JPanel cdCover;
+    private javax.swing.JTextArea cdInfo;
     private javax.swing.JPanel cdTab;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTabbedPane libraryTab;
     // End of variables declaration//GEN-END:variables
 }

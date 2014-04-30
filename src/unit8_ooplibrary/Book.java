@@ -39,8 +39,8 @@ public class Book extends LibraryMaterial {
         this.printEdition = printEdition;
         this.text = "";
     }
-
-    public void setBookCoverType(BookCoverType type)
+// book constructor 
+    public void setBookCoverType(BookCoverType type)  // method set and get the book cover
     {
         this.bookCoverType = type; 
     }
@@ -50,17 +50,17 @@ public class Book extends LibraryMaterial {
         return this.bookCoverType;
     }
 
-    public void setPrintEdition(Byte printEdition)
+    public void setPrintEdition(Byte printEdition)   // method set and get the print edition 
     {
         this.printEdition = printEdition;
     }
 
-    public int getPrintEdition()
+    public int getPrintEdition()  
     {
         return this.printEdition;
     }
 
-    public void setNumberOfPages(int numberOfPages)
+    public void setNumberOfPages(int numberOfPages)  // method set and get the number of pages
     {
         this.numberOfPages = numberOfPages;
     }
@@ -70,7 +70,7 @@ public class Book extends LibraryMaterial {
         return this.numberOfPages;
     }
 
-    public void setBookCoverImage(ImageIcon bookCoverImage)
+    public void setBookCoverImage(ImageIcon bookCoverImage)  // method set and get the cover image
     {
         super.setCoverImage(bookCoverImage);
         this.bookCoverImage = bookCoverImage;
@@ -81,7 +81,7 @@ public class Book extends LibraryMaterial {
         return this.bookCoverImage;
     }
 
-    @Override
+    @Override // enum to BookCoverType class
     public String displayInfo()
     {
         text = (new StringBuilder())
@@ -94,7 +94,7 @@ public class Book extends LibraryMaterial {
                 .append("\nBook Price: ").append(formatter.format(super.getPrice())).toString();
         return text;
     }
-
+// TODO: display the info on the panel
     public ImageIcon getCover()
     {
         return bookCoverImage;

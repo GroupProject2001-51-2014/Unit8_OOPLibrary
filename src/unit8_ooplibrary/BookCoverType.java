@@ -34,3 +34,4 @@ public enum BookCoverType {
         }
     } 
 }
+//  method to enum the book cover 
