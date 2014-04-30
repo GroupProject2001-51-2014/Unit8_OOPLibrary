@@ -10,22 +10,37 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Inventory {
 
-    private final ConcurrentHashMap<Integer, Inventory> libraryMaterials = new ConcurrentHashMap(5,0.9f,3);  
-    private int libraryMaterialID;
+    private static final ConcurrentHashMap<Integer, Inventory> libraryMaterials = new ConcurrentHashMap(5,0.9f,3);  
+    private static int libraryMaterialID;
     private LibraryMaterial libraryMaterial;
     private Librarian librarian;
     private Date checkOut;
     private Date checkin;
     private boolean depricated;
     
-    private Inventory(){}
+    private Inventory(){
+        if (null == Inventory.libraryMaterials) {
+            Inventory.libraryMaterialID = 0;
+        }else{
+            Inventory.libraryMaterialID = Inventory.libraryMaterials.size();
+        }
+    }
     
     public Inventory(LibraryMaterial libraryMaterial){
+        if (null == Inventory.libraryMaterials) {
+            Inventory.libraryMaterialID = 0;
+        }else{
+            Inventory.libraryMaterialID = Inventory.libraryMaterials.size();
+        }
         this.libraryMaterial = libraryMaterial;
     }
             
     public Inventory(LibraryMaterial libraryMaterial, Librarian librarian, Date checkOut, Date checkin, boolean depricated) {
-        this.libraryMaterialID = this.libraryMaterials.size() + 1;
+        if (null == Inventory.libraryMaterials) {
+            Inventory.libraryMaterialID = 0;
+        }else{
+            Inventory.libraryMaterialID = Inventory.libraryMaterials.size();
+        }
         this.libraryMaterial = libraryMaterial;
         this.librarian = librarian;
         this.checkOut = checkOut;
@@ -33,18 +48,33 @@ public class Inventory {
         this.depricated = depricated;
     }
 
+    protected boolean AddInventory(Inventory inventory) throws NullPointerException{
+        if (null == Inventory.libraryMaterials) {
+            return false;
+        }
+        try{
+            if (Inventory.libraryMaterials.containsKey(Inventory.libraryMaterialID)) {
+                return false;
+            }
+            Inventory.libraryMaterials.put(Inventory.libraryMaterialID, this);
+            return true;
+        }
+        catch(NullPointerException ex){
+            throw ex;
+        }
+    }
+    
     protected int getLibraryMaterialID() {
-        return this.libraryMaterialID;
+        return Inventory.libraryMaterialID;
     }
 
     private void setLibraryMaterialID(int libraryMaterialID) {
-    // TODO: Implement functionality for setLibraryMaterialID to get Id from HashMap
-    throw new UnsupportedOperationException();
+            Inventory.libraryMaterialID = libraryMaterialID;
     }
-    
+
     // TODO: Add method to UML
     protected ConcurrentHashMap<Integer, Inventory> getLibraryMaterials() {
-        return this.libraryMaterials;
+        return Inventory.libraryMaterials;
     }
 
     // add method to add Inventory item addToInventory
@@ -82,6 +112,13 @@ public class Inventory {
 
     protected boolean isDepricated() {
         return this.depricated;
+    }
+    
+    protected int nextLibraryMaterialID() throws NullPointerException {
+        if(null != Inventory.libraryMaterials){
+            return libraryMaterials.size();
+        }
+        throw new NullPointerException("Class Inventory Method setLibraryMaterialID(int libraryMaterialID) hasd returned a null because the Inventory Collection is not initialized");
     }
 
     protected void setDepricated(boolean depricated) {
