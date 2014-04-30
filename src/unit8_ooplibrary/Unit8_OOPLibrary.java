@@ -133,6 +133,13 @@ public class Unit8_OOPLibrary {
             */
             //</editor-fold>  
             
+            Inventory inventory = new Inventory(new LibraryMaterial() {});
+            inventory.AddInventory(inventory);
+            Inventory inventory1 = new Inventory(new LibraryMaterial() {});
+            inventory.AddInventory(inventory1);
+            System.out.print(inventory.nextLibraryMaterialID()+"\n");
+            
+            
             System.out.print("Done!\n");
         }//end if DEBUG   
     }//end method MAIN
