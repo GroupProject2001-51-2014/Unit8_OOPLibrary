@@ -66,7 +66,7 @@ public class LibraryGUI extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 80, 419, 348);
 
-        libraryTab.addTab("HOME", new javax.swing.ImageIcon(getClass().getResource("/Image/HomeButton.png")), jPanel1); // NOI18N
+        libraryTab.addTab("HOME", new javax.swing.ImageIcon(getClass().getResource("/Image/Icon_HomeButton.png")), jPanel1, ""); // NOI18N
 
         bookTab.setBackground(new java.awt.Color(102, 255, 102));
 
@@ -114,7 +114,7 @@ public class LibraryGUI extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bookCover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(54, Short.MAX_VALUE))
+                        .addContainerGap(79, Short.MAX_VALUE))
                     .addGroup(bookTabLayout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -124,7 +124,7 @@ public class LibraryGUI extends javax.swing.JFrame {
                         .addGap(35, 35, 35))))
         );
 
-        libraryTab.addTab("BOOK", new javax.swing.ImageIcon(getClass().getResource("/Image/book.png")), bookTab); // NOI18N
+        libraryTab.addTab("BOOK", new javax.swing.ImageIcon(getClass().getResource("/Image/Icon_book.png")), bookTab); // NOI18N
 
         cdTab.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -168,7 +168,7 @@ public class LibraryGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cdTabLayout.createSequentialGroup()
                 .addGroup(cdTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cdTabLayout.createSequentialGroup()
-                        .addContainerGap(51, Short.MAX_VALUE)
+                        .addContainerGap(76, Short.MAX_VALUE)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(cdTabLayout.createSequentialGroup()
@@ -184,23 +184,20 @@ public class LibraryGUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        libraryTab.addTab("CD-DVD", new javax.swing.ImageIcon(getClass().getResource("/Image/cd.png")), cdTab); // NOI18N
+        libraryTab.addTab("CD-DVD", new javax.swing.ImageIcon(getClass().getResource("/Image/icon_cd.png")), cdTab); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+            .addComponent(libraryTab, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addComponent(libraryTab, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
